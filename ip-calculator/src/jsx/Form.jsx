@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { cidrToMask, maskToCidr, maskToWildcard, findIpRange } from './Converter';
-import { isValidIp, isValidMask, isValidCIDR, isInRange } from './FormatChecker';
+import { cidrToMask, maskToCidr, maskToWildcard, findIpRange } from '../Utility/Converter';
+import { isValidIp, isValidMask, isValidCIDR, isInRange } from '../Utility/FormatChecker';
+import "../css/calculator.css";
 
 const Form = () => {
 
@@ -33,7 +34,7 @@ const Form = () => {
             setMask("");
 
         setCheckCIDR(isvalid.toString());
-    }, [cidr]);
+    }, [cidr, swap]);
 
     useEffect(() => {
         const isValid = isValidMask(mask);
@@ -44,7 +45,7 @@ const Form = () => {
             setCidr("")
 
         setCheckMask(isValidMask(mask).toString());
-    }, [mask]);
+    }, [mask, swap]);
 
     useEffect(() => {
         setTestIp("");
@@ -68,7 +69,6 @@ const Form = () => {
 
     return (
         <div className="calc-form">
-            <h2>IP Calculator</h2>
             <input
                 type="text"
                 id="ipaddress"
@@ -86,7 +86,7 @@ const Form = () => {
                 onChange={(e) => setCidr(e.target.value)}
                 onFocus={() => setSwap(true)}
             />
-            : OR :
+            <span>: OR :</span>
             <input
                 type="text"
                 id="mask"
@@ -111,7 +111,7 @@ const Form = () => {
                     {"Number of IPV4 addresses: " + Math.pow(2, 32 - cidr)}
                     <h4>Range</h4>
                     <p>
-                        {"Min: " + min + " / " + "Max: " + max}
+                        {`Min: ${min} / Max: ${max}`}
                     </p>
                     <article>
                         <h4>Is in range ?</h4>

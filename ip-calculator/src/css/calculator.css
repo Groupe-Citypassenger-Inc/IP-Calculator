@@ -1,0 +1,13 @@
+.calculator {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 40px;
+}
+
+.calc-form {
+    display: flex;
+    flex-direction: column;
+}
