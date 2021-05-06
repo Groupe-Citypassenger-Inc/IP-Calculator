@@ -3,11 +3,22 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    justify-items: center;
-    padding-top: 40px;
+    padding-top: 2%;
 }
 
-.calc-form {
-    display: flex;
-    flex-direction: column;
+.form input {
+    padding: 4px 4px 2px 4px;
+    border-color: transparent transparent lightblue transparent;
+    margin: 5px 1px;
+}
+
+.form input:focus {
+    border-bottom-color: #A3C037;
+}
+
+@media (max-width: 500px) {
+    .calculator {
+        width: 85%;
+        overflow: hidden;
+    }
 }

@@ -1,5 +1,24 @@
 .app-sidebar {
-    width: 15%;
+    min-width: 15%;
     height: 100%;
     display: inline-block;
+}
+
+.app-sidebar img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 17px;
+}
+
+@media (max-width: 500px) {
+    .app-sidebar {
+        width: 85%;
+    }
+
+    .app-sidebar img {
+        width: 50px;
+        height: 45px;
+        position: absolute;
+    }
 }
