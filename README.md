@@ -19,3 +19,5 @@ Utiliser la commande ```npm run audit:build``` permet d'exécuter ces trois comm
 
 L'IP Calculator n'utilisant aucun système de route, mettre comme valeur ```"."``` à homepage est suffisant pour que tout les chemins soient relatifs à la position de l'index.html ([ref](https://create-react-app.dev/docs/deployment/#serving-the-same-build-from-different-paths)).
 Dans le cas contraire, il aurait été nécessaire de préciser le chemin relatif (i.e: "homepage": "http://example.com/relativepath").
+
+Récupérer le dossier build et le déployer sur le serveur choisi. La configuration du server devra faire en sorte qu'en fonction du chemin choisi pour host l'application, il redirige vers build/index.html.
