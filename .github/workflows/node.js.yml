@@ -29,4 +29,3 @@ jobs:
     - run: npm audit
     - run: npm audit fix
     - run: npm run build
-    - run: npm test
