@@ -11,6 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "audit:build": "npm install && npm audit fix && react-scripts build",
     "test": "react-scripts test"
   },
   "eslintConfig": {
