@@ -48,8 +48,6 @@ const Form = () => {
     }, [mask, swap]);
 
     useEffect(() => {
-        setTestIp("");
-        setAnswer("");
         if ((isValidIp(ip) && isValidCIDR(cidr)) || (isValidIp(ip) && isValidMask(mask))) {
             let res = findIpRange(ip, cidr, mask);
             setMin(res.min);
@@ -65,7 +63,7 @@ const Form = () => {
         } else if (testIp !== "") {
             setAnswer("Invalid format");
         }
-    }, [testIp])
+    }, [testIp, min, max])
 
     return (
         <div className="calc-form">
