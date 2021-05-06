@@ -5,7 +5,7 @@ name: IP-Calculator-Build
 
 on:
   push:
-    branches: [ release ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
