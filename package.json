@@ -6,12 +6,12 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "audit:build": "npm install && npm audit fix && react-scripts build",
+    "ci": "npm install && npm audit fix",
     "test": "react-scripts test"
   },
   "eslintConfig": {
