@@ -4,10 +4,6 @@ import "../css/calculator.css";
 
 const Calculator = () => {
 
-    useEffect(() => {
-        document.title = "IP Calculator";
-    }, []);
-
     return (
         <div className="calculator">
             {Form()}
